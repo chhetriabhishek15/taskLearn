@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block strat %}
+<div class="container mt-5">
+  <form class="col-6 mx-auto card p-3" method="post">
+    <h1 class="mx-auto">Sign In</h1>
+    {% csrf_token %}
+    <!-- Email input -->
+    <div data-mdb-input-init class="form-outline mb-3">
+      <input type="email" id="form2Example1" class="form-control" />
+      <label class="form-label" for="form2Example1" name="email_Add"
+        >Email address</label
+      >
+    </div>
+
+    <!-- Password input -->
+    <div data-mdb-input-init class="form-outline mb-3">
+      <input type="password" id="form2Example2" class="form-control" />
+      <label class="form-label" for="form2Example2" name="passwd"
+        >Password</label
+      >
+    </div>
+
+    <!-- Submit button -->
+    <button
+      type="submit"
+      data-mdb-button-init
+      data-mdb-ripple-init
+      class="btn btn-success btn-block mb-4"
+    >
+      Sign in
+    </button>
+  </form>
+</div>
+{% endblock %}
